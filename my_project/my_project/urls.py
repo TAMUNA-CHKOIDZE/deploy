@@ -19,7 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from book_app.views import home
+
 urlpatterns = [
+    path('', home, name='home'),  # მთავარი URL
     path('admin/', admin.site.urls),
     path('books/', include('book_app.urls')),
 ]
