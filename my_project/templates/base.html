@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}ჩემი ბიბლიოთეკა{% endblock %}</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="{% url 'books' %}">📚 წიგნები</a>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    {% block content %}
+        <!-- შიგთავსი -->
+    {% endblock %}
+</main>
+
+<footer>
+    <hr>
+    <p>&copy; 2025 ჩემი საიტი</p>
+</footer>
+</body>
+</html>
