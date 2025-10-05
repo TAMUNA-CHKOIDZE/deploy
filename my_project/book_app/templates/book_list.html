@@ -4,9 +4,14 @@
 
 {% block content %}
     <h2>წიგნების სია</h2>
-    <ul>
+    <ul style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px">
         {% for book in books %}
-            <li>{{ book.title }} - {{ book.author }}</li>
+            <li style="border: 2px solid black; padding: 16px">
+                <img src="{{ book.photo.url }}" alt="{{ book.title }}"
+                     style="width: 100%; max-height:280px; object-fit: cover">
+                <h4>{{ book.author }}</h4>
+                <h3>{{ book.title }}</h3>
+            </li>
         {% empty %}
             <li>წიგნები ვერ მოიძებნა.</li>
         {% endfor %}
